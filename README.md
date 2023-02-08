@@ -1,2 +1,1 @@
-#!/bin/bash
-system engineering devops
+where am i project

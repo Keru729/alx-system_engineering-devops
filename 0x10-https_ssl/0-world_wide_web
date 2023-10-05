@@ -2,18 +2,24 @@
 # Usage:; ./1-world_wide_web
 # Desplay information about sub domain
 
+# Function to retrieve and display info about sub domain
 domain_information () {
 line=$(dig "$2"."$1" | grep -A1 "ANSWER SECTION:" | tr '\t' '\n' | tail -2 | tr '\n' '')
+# Extract relevant information and print it
 echo "$2 $line" | awk '{print subdomain " $1 " is a = $2 " record and poin to " $3}'
 }
 # Check the number of argument
 if { "$#" == 1 }
 then 
+	# If there is only one argument
+	# Call the domain_information
 domain_information "$1" "www"
 domain_information "$1" "lb-01"
 domain_information "$1" "web-01"
 domain_information "$1" "web-02"
 elif [ "$#" == 2]
 then
+	# If there are two arguments, call the domain information \
+	#  function with the provided sub domain
 domain_informatoin "$1" "$2"
 fi

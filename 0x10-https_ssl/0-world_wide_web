@@ -9,7 +9,7 @@ line=$(dig "$2"."$1" | grep -A1 "ANSWER SECTION:" | tr '\t' '\n' | tail -2 | tr 
 echo "$2 $line" | awk '{print subdomain " $1 " is a = $2 " record and poin to " $3}'
 }
 # Check the number of argument
-if { "$#" == 1 }
+if { "$#" == 1 };
 then 
 	# If there is only one argument
 	# Call the domain_information

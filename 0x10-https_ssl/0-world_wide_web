@@ -18,4 +18,4 @@ get_info() {
   fi
 }
 
-get_info $1 $2
+get_info $1 $2 $4 $5

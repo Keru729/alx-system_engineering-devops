@@ -1,0 +1,4 @@
+rm: cannot remove '/etc/nginx/sites-enabled/default': No such file or directory
+sed: can't read /etc/nginx/sites-enabled/default/etc/nginx/sites-enabled/default: No such file or directory
+ * Restarting nginx nginx
+   ...done.
